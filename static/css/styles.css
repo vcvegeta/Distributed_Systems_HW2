@@ -1,0 +1,134 @@
+/* 
+   Part 1 – CSS Styling (Artist Library)
+   Custom styles for the Book Management single-page app.
+   Uses a blue accent palette with clean card-based layout.
+    */
+
+/*  Global reset and body */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+/*  Page heading banner */
+.heading {
+    background-color: #1565c0;
+    color: white;
+    padding: 18px;
+    margin: -20px -20px 24px -20px;
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+}
+
+h2 {
+    color: #1565c0;
+    margin-top: 28px;
+}
+
+h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Inputs and buttons */
+input[type="text"],
+input[type="number"] {
+    margin: 6px;
+    padding: 10px 14px;
+    font-size: 15px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #1565c0;
+}
+
+button {
+    margin: 6px;
+    padding: 10px 20px;
+    font-size: 15px;
+    background-color: #1976d2;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #0d47a1;
+}
+
+/* Secondary button style (e.g., Clear search) */
+.btn-secondary {
+    background-color: #78909c;
+}
+
+.btn-secondary:hover {
+    background-color: #546e7a;
+}
+
+/* Danger button style (e.g., Delete) */
+.btn-danger {
+    background-color: #d32f2f;
+}
+
+.btn-danger:hover {
+    background-color: #b71c1c;
+}
+
+/* Search bar container */
+.search-container {
+    margin: 16px auto;
+    max-width: 600px;
+}
+
+/* Action cards (Add / Update / Delete sections) */
+.actions-container {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 520px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.10);
+}
+
+.helper-text {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 4px 0 12px 0;
+}
+
+/* Book table */
+.book-table {
+    width: 80%;
+    max-width: 700px;
+    margin: 16px auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.book-table th,
+.book-table td {
+    border: 1px solid #ddd;
+    padding: 10px 14px;
+}
+
+.book-table th {
+    background-color: #1565c0;
+    color: white;
+    text-align: center;
+}
+
+.book-table td {
+    text-align: left;
+}

@@ -1,0 +1,71 @@
+<!-- 
+     Part 1 – HTML & CSS (Artist Library)
+     A clean, single-page Book Management interface that lets
+     users view, add, update, delete, and search for books.
+      -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Management – REST API</title>
+    <!-- Part 1: External stylesheet for all visual styling -->
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+
+<body>
+    <!-- Page header banner -->
+    <h1 class="heading">📚 Book Management App</h1>
+
+    <!-- ---- Part 2 Q4: Search bar for filtering books by title ---- -->
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search books by title...">
+        <button onclick="searchBooks()">Search</button>
+        <button onclick="clearSearch()" class="btn-secondary">Clear</button>
+    </div>
+
+    <!-- Table that displays the current list of books -->
+    <h2>Books List</h2>
+    <table id="bookTable" class="book-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Author</th>
+            </tr>
+        </thead>
+        <tbody id="bookTableBody">
+            <!-- Rows are populated dynamically by app.js -->
+        </tbody>
+    </table>
+
+    <!-- Part 2 Q1: Form to add a new book  -->
+    <div class="actions-container">
+        <h3>Add a New Book</h3>
+        <input type="text" id="createTitle" placeholder="Enter book title">
+        <input type="text" id="createAuthor" placeholder="Enter author name">
+        <button onclick="createBook()">Add Book</button>
+    </div>
+
+    <!-- Part 2 Q2: Form to update an existing book by ID -->
+    <div class="actions-container">
+        <h3>Update a Book</h3>
+        <input type="number" id="updateId" placeholder="Enter Book ID">
+        <input type="text" id="updateTitle" placeholder="Enter new title">
+        <input type="text" id="updateAuthor" placeholder="Enter new author">
+        <button onclick="updateBook()">Update Book</button>
+    </div>
+
+    <!-- Part 2 Q3: Button to delete the book with the highest ID -->
+    <div class="actions-container">
+        <h3>Delete Book with Highest ID</h3>
+        <p class="helper-text">Clicking the button removes the book that currently has the highest ID.</p>
+        <button onclick="deleteHighestBook()" class="btn-danger">Delete Highest-ID Book</button>
+    </div>
+
+    <!-- Part 1: External JavaScript for all CRUD logic -->
+    <script src="/static/js/app.js"></script>
+</body>
+
+</html>
